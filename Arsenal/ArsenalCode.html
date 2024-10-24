@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Test</title>
+    <style>
+        body {
+            position: relative;
+            z-index: 1;
+            font-family: Arial, sans-serif;
+            background-color: #595a5a;
+            overflow-y: scroll;
+            background-image: url("https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_1280.png");
+            background-repeat: repeat;
+            background-position: center;
+            background-size: cover;
+            height: 150vh
+        }
+
+        form {
+            background: rgb(79, 78, 78);
+            box-shadow: 0 0 8px 8px black inset;
+            background-color: rgba(0, 0, 0, 0);
+            background-blend-mode: darken;
+            background-size: 100%;
+            background-position: bottom -200vh right 1vh;
+            background-image: url("https://cdna.artstation.com/p/assets/images/images/078/761/702/large/prescott-grigsby-destiny-2-2024-05-03-20-55-18.jpg?1723012445");
+            margin-top: -5vh;
+            margin-left: 3vh;
+            padding: 0%;
+            /* Adjust padding as needed */
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+            height: 25vh;
+            width: 145vh;
+        }
+
+        input {
+            padding: 0.70vh;
+            margin: 8px 0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            margin-top: 16vh;
+            margin-bottom: 0vh;
+            width: 50vh;
+        }
+
+        button {
+            border: #000000;
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            top: 0.3vh;
+            margin-left: -.6%;
+            z-index: 2;
+            width: 4vh;
+            height: 3.1vh;
+            font-size: large;
+        }
+
+        /*--Button Stuff--*/
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            left: 73.4vh;
+            bottom: 14.3vh;
+        }
+
+        .dropbtn {
+            background-color: rgba(77, 77, 77, 0.8);
+            background-blend-mode: darken;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom-right-radius: 0px;
+            border: none;
+            cursor: pointer;
+            margin-top: 0vh;
+            margin-left: 0vh;
+            width: 15vh;
+            height: 5vh;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            min-width: 18.17vh;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropbtn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: rgb(255, 255, 255);
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            color: white;
+            border-bottom-width: 0px;
+        }
+
+        .dropdown:click .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .buttonPvP {
+            display: block;
+            line-height: 36px;
+            border: #000000;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            border-radius: 0px;
+            border-style: solid;
+            border-width: 1px;
+            border-top-right-radius: 0;
+            border-top-left-radius: 8px;
+            border-bottom-right-radius: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: darken;
+            background-size: cover;
+            transform: scale(1.0);
+            background-image: url("https://imguscdn.gamespress.com/cdn/files/Bungie/2024/04/092135-6bdbc672/2024_Into_the_Light_Press_Kit_Cinematics_COMPRESSED_004.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=b7e30986dd58163f34cb34145358c596ce4780cd08fbbfb28d0869396b5d8803&w=1024&maxheight=4096&mode=pad&format=jpg");
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            padding: 0px;
+            margin-left: 0px;
+            z-index: 20;
+            top: 3px;
+            right: 31px;
+            width: 100%;
+            height: 38.7%;
+            text-align: center;
+            font-size: large;
+            font-weight: normal;
+        }
+
+        .buttonPvE {
+            display: block;
+            line-height: 36px;
+            border: #000000;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            border-radius: 0px;
+            border-style: solid;
+            border-width: 1px;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: darken;
+            background-size: cover;
+            transform: scale(1.0);
+            background-image: url("https://imguscdn.gamespress.com/cdn/files/Bungie/2024/04/092135-6bdbc672/2024_Into_the_Light_Press_Kit_Cinematics_LARGE_001.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=f101517d7f8b9d0a65272e406d58c09ac7046950177b1f1b54b4c6ef0863a303&w=1024&maxheight=4096&mode=pad&format=jpg");
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            top: 3px;
+            right: 31px;
+            padding: 0px;
+            margin-left: 0px;
+            z-index: 2;
+            width: 100%;
+            height: 18.7%;
+            text-align: center;
+            font-size: large;
+            font-weight: normal;
+        }
+
+        .buttonRaid {
+            display: block;
+            line-height: 36px;
+            border: #000000;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            border-radius: 0px;
+            border-style: solid;
+            border-width: 1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: darken;
+            background-size: cover;
+            transform: scale(1.0);
+            background-image: url("https://imguscdn.gamespress.com/cdn/files/Bungie/2024/04/092135-6bdbc672/2024_Into_the_Light_Press_Kit_Cinematics_LARGE_006.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=7fd27e6d71d983b55a4c66ad0b2c10f915174006933f0c5f4c27d9434c6ef1a8&w=1024&maxheight=4096&mode=pad&format=jpg");
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            top: 3px;
+            right: 31px;
+            padding: 0px;
+            margin-left: 0px;
+            z-index: 2;
+            width: 100%;
+            height: 18.4%;
+            text-align: center;
+            font-size: large;
+            font-weight: normal;
+        }
+
+        .buttonPvP:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: rgb(255, 255, 255);
+        }
+
+        .buttonPvE:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: rgb(255, 255, 255);
+        }
+
+        .buttonRaid:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: rgb(255, 255, 255);
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        .search-result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            z-index: 2;
+            position: relative;
+            width: 55%;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 10;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            width: 100px;
+            top: 40px;
+            right: -20px;
+            text-shadow: 0px 0px 10px #000000;
+        }
+
+        img {
+            margin-top: 20px;
+            padding: 2px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .character-box,
+        .character-box2,
+        .character-box3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1%;
+            background-color: rgba(0, 0, 0, 0.8);
+            background-blend-mode: darken;
+            background-size: cover;
+            background-image: url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg");
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            max-width: 10000px;
+            gap: 0px;
+            box-sizing: border-box;
+            margin-top: 1%;
+            margin-right: -3.4%;
+            width: 31.9%;
+            height: 60%;
+            border-style: ridge;
+            border-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .character-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: -6px;
+        }
+
+        .character-header .text {
+            font-size: x-large;
+            margin-bottom: -10px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .character-header .subtext {
+            font-size: small;
+            margin-bottom: 0px;
+            color: rgb(144, 144, 144);
+            ;
+            font-weight: unset;
+        }
+
+        .character-subheader {
+            z-index: 10;
+            display: flex;
+            font-size: medium;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 30px;
+            color: rgb(144, 144, 144);
+            font-style: italic;
+        }
+
+        .character-stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            font-size: medium;
+            color: #fff;
+        }
+
+        .character-bestStats {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            font-size: medium;
+            color: #fff;
+            border-style: ridge;
+            border-width: 1px;
+            border-color: #eeff00;
+            border-radius: 0px;
+        }
+
+        .character-bestStats .header {
+            font-size: x-large;
+            margin-top: 0px;
+            margin-left: 3px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+
+        .character-stats .stat {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .character-stats .stat span {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .character-stats .stat .value {
+            color: rgb(188, 188, 188);
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .character-box {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .characterPreviewContainer {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin-right: 0px;
+            gap: 1.8vh;
+            display: flex;
+            height: 14vh;
+            width: 140vh;
+            justify-content: space-between;
+        }
+
+        .characterStatsContainer {
+            position: relative;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-left: 3.4vh;
+            display: flex;
+            width: 138vh;
+            height: 90vh;
+            justify-content: space-between;
+            gap: 1.8vh;
+        }
+
+
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        .userCharQForm {
+            background: rgb(255, 255, 255);
+            top: 300px;
+            margin-top: 35px;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+            width: 55%;
+        }
+
+        /*Emblem Styling*/
+
+        .emblem1LL-text {
+            position: relative;
+            bottom: -79px;
+            left: -10px;
+            color: rgb(240, 236, 8);
+            font-size: x-large;
+            font-style: bold;
+            z-index: 3;
+        }
+
+        .emblem2LL-text {
+            position: relative;
+            bottom: -79px;
+            left: -10px;
+            color: rgb(240, 236, 8);
+            font-size: x-large;
+            font-style: bold;
+            z-index: 3;
+        }
+
+        .emblem3LL-text {
+            position: relative;
+            bottom: -79px;
+            left: -10px;
+            color: rgb(240, 236, 8);
+            font-size: x-large;
+            font-style: bold;
+            z-index: 3;
+        }
+
+        .emblem1Race-text {
+            position: relative;
+            bottom: -65px;
+            left: 79px;
+            width: auto;
+            color: rgb(180, 180, 180);
+            font-size: small;
+            font-style: italic;
+            z-index: 30;
+        }
+
+        .emblem2Race-text {
+            position: relative;
+            bottom: -65px;
+            left: -102px;
+            width: auto;
+            color: rgb(180, 180, 180);
+            font-size: small;
+            font-style: italic;
+            z-index: 3;
+        }
+
+        .emblem3Race-text {
+            position: relative;
+            bottom: -65px;
+            left: -102px;
+            width: auto;
+            color: rgb(180, 180, 180);
+            font-size: small;
+            font-style: italic;
+            z-index: 3;
+        }
+
+        .emblem1Class-text {
+            position: relative;
+            bottom: -79px;
+            left: 78px;
+            color: white;
+            font-size: x-large;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .emblem2Class-text {
+            position: relative;
+            bottom: -79px;
+            left: 78px;
+            color: white;
+            font-size: x-large;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .emblem3Class-text {
+            position: relative;
+            bottom: -79px;
+            left: 78px;
+            color: white;
+            font-size: x-large;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .emblem-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: inline-block;
+            width: 48vh;
+            height: 80vh;
+            padding-top: 0px;
+            margin-top: -3%;
+            margin-left: 2.5%;
+            z-index: 12;
+        }
+
+        .emblem-container img {
+            height: 9.5vh;
+            width: 43.5vh;
+        }
+
+        .emblem-container .header {
+            font-size: x-large;
+            margin-top: 0px;
+            margin-left: 0px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .emblem-container .subheader {
+            color: rgb(180, 180, 180);
+            font-size: small;
+            font-style: italic;
+            display: grid;
+            z-index: 3;
+        }
+
+        .bests-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 5px;
+            width: 370px;
+            height: 180px;
+            padding-top: 0px;
+            margin-top: 0px;
+            z-index: 12;
+        }
+
+        .loadingScreen {
+            display: block;
+            width: 110vh;
+            height: 70vh;
+            background-color: #fff;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-image: url("https://cdna.artstation.com/p/assets/images/images/079/011/940/large/prescott-grigsby-untitled-design-1.jpg?1723713045");
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>ARSENAL</h1>
+    <form id="userInfoForm">
+        <label for="BungieID"></label>
+        <input type="text" id="BungieID" name="BungieID" required placeholder="Enter Bungie name: (Player#0000)">
+        <button id="searchButton" type="submit">🔎︎</button>
+        <div class="dropdown">
+            <button class="dropbtn" id="actDrop" style="display:block">Activities ▼</button>
+            <div class="dropdown-content">
+                <div class="buttonPvP" id="PvPButton" style="display:block;">Crucible</div>
+                <div class="buttonPvE" id="PvEButton" style="display:block;">Vangaurd</div>
+                <div class="buttonRaid" id="RaidButton" style="display:block;">Raids</div>
+            </div>
+        </div>
+    </form>
+
+    <div class="loadingScreen" id="loadingScreen" style="display:none;">Loading...</div>
+
+    <div class="search-result" id="searchResult" style="display:none;"></div>
+
+
+    <div class="characterPreviewContainer" id="characterPreviewContainer" style="display:none;">
+        <div class="emblem-container" id='emblem1-container' style="display:flex">
+            <div class="character-header" id="character1Header">
+                <span class="emblem1Class-text" id="emblem1Class" name="emblem1Class">Character 1</span>
+                <span class="emblem1LL-text" id="emblem1LL" name="emblem1LL">LL 1</span>
+            </div>
+            <div class="subheader" id='character1SubHeader'>
+                <span class="emblem1Race-text" id="emblem1Race" name="emblem1Race">Race 1</span>
+            </div>
+            <img name="emblem1" id="emblem1" style="display:flex;"
+                src="https://www.bungie.net/common/destiny2_content/icons/80620e24ad1c18b8c77868b4dd85537b.jpg"
+                alt="Emblem" width="400" height="80">
+        </div>
+        <div class="emblem-container" id='emblem2-container'>
+            <div class="character-header" id="character2Header">
+                <span class="emblem2Class-text" id="emblem2Class" name="emblem2Class">Character 2</span>
+                <span class="emblem2LL-text" id="emblem2LL" name="emblem2LL">LL 2</span>
+            </div>
+            <div class="subheader" id='character2SubHeader'>
+                <span class="emblem2Race-text" id="emblem2Race" name="emblem2Race">Race 2</span>
+            </div>
+            <img name="emblem2" id="emblem2" style="display:flex;"
+                src="https://www.bungie.net/common/destiny2_content/icons/80620e24ad1c18b8c77868b4dd85537b.jpg"
+                alt="Emblem" width="400" height="80">
+        </div>
+        <div class="emblem-container" id='emblem3-container'>
+            <div class="character-header" id="character3Header">
+                <span class="emblem3Class-text" id="emblem3Class" name="emblem3Class">Character 3</span>
+                <span class="emblem3LL-text" id="emblem3LL" name="emblem3LL">LL 3</span>
+            </div>
+            <div class="subheader" id='character3SubHeader'>
+                <span class="emblem3Race-text" id="emblem3Race" name="emblem3Race">Race 3</span>
+            </div>
+            <img name="emblem3" id="emblem3" style="display:flex;"
+                src="https://www.bungie.net/common/destiny2_content/icons/80620e24ad1c18b8c77868b4dd85537b.jpg"
+                alt="Emblem" width="400" height="80">
+        </div>
+    </div>
+
+    <div class="characterStatsContainer" id="characterStatsContainer" style="display:none;">
+        <div class="character-box" id="character-box">
+            <!-- Character Header -->
+            <div class="character-header">
+                <span class="text" name="">Crucible:</span>
+                <span class="subtext" id="char1GPText">xxx games played</span>
+            </div>
+            <div class="character-subheader">
+                <span class="text" id="char1TPText">xd xh</span>
+            </div>
+
+            <!-- Character Game Play Info -->
+
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat">
+                    <span class="character1-KADtext">KAD:</span>
+                    <span class="value character1-KADVtext" id="char1KADVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character1-KDtext">KD:</span>
+                    <span class="value character1-KDVtext" id="char1KDVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character1-WRtext">Win Rate:</span>
+                    <span class="value character1-WRVtext" id="char1WRVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character1-Ktext">Kills:</span>
+                    <span class="value character1-KVtext" id="char1KVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character1-Dtext">Deaths:</span>
+                    <span class="value character1-DVtext" id="char1DVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character1-Atext">Assists:</span>
+                    <span class="value character1-AVtext" id="char1AVText">xx</span>
+                </div>
+            </div>
+            <!--Bests Box-->
+
+            <div class="bests-container" style="display:flex;">
+
+            </div>
+        </div>
+
+        <div class="character-box2" id="character-box2">
+            <!-- Character Header -->
+            <div class="character-header">
+                <span class="text" name="">Crucible:</span>
+                <span class="subtext" id="char3GPText">xxx games played</span>
+            </div>
+            <div class="character-subheader">
+                <span class="text" id="char3TPText">xd xh</span>
+            </div>
+
+            <!-- Character Game Play Info -->
+
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat">
+                    <span class="character2-KADtext">KAD:</span>
+                    <span class="value character2-KADVtext" id="char2KADVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character2-KDtext">KD:</span>
+                    <span class="value character2-KDVtext" id="char2KDVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character2-WRtext">Win Rate:</span>
+                    <span class="value character2-WRVtext" id="char2WRVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character2-Ktext">Kills:</span>
+                    <span class="value character2-KVtext" id="char2KVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character2-Dtext">Deaths:</span>
+                    <span class="value character2-DVtext" id="char2DVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character2-Atext">Assists:</span>
+                    <span class="value character2-AVtext" id="char2AVText">xx</span>
+                </div>
+            </div>
+
+            <!--Bests Box-->
+
+            <div class="bests-container" style="display:flex;">
+
+            </div>
+
+        </div>
+
+        <div class="character-box3" id="character-box3">
+            <!-- Character Header -->
+            <div class="character-header">
+                <span class="text" name="">Crucible:</span>
+                <span class="subtext" id="char2GPText">xxx games played</span>
+            </div>
+            <div class="character-subheader">
+                <span class="text" id="char2TPText">xd xh</span>
+            </div>
+
+            <!-- Character Game Play Info -->
+
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat">
+                    <span class="character3-KADtext">KAD:</span>
+                    <span class="value character3-KADVtext" id="char3KADVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character3-KDtext">KD:</span>
+                    <span class="value character3-KDVtext" id="char3KDVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character3-WRtext">Win Rate:</span>
+                    <span class="value character3-WRVtext" id="char3WRVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character3-Ktext">Kills:</span>
+                    <span class="value character3-KVtext" id="char3KVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character3-Dtext">Deaths:</span>
+                    <span class="value character3-DVtext" id="char3DVText">xx</span>
+                </div>
+                <div class="stat">
+                    <span class="character3-Atext">Assists:</span>
+                    <span class="value character3-AVtext" id="char3AVText">xx</span>
+                </div>
+            </div>
+
+            <!--Bests Box-->
+
+            <div class="bests-container" style="display:flex;">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="char-result" id="charResult" style="display:none;"></div>
+
+    <script>
+
+        //*FOR DATABASE CONTENT, DOWNLOAD MANIFEST AND RENAME THE FILE TO HAVE .zip CONCATENATED RATHER THAN .content, THEN EXTRACT ALL*
+
+        const searchInput = document.getElementById('BungieID');
+        const searchButton = document.getElementById('searchButton');
+
+        searchInput.addEventListener('keyup',
+            (event) => {
+                if (event.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+
+
+        document.getElementById('userInfoForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            document.getElementById('characterPreviewContainer').style.display = "none";
+            document.getElementById('characterStatsContainer').style.display = "none";
+            document.getElementById('actDrop').style.display = "none";
+            document.getElementById('loadingScreen').style.display = "block";
+
+            // Get user Bungie name input
+            var usersRawBungieID = document.getElementById('BungieID').value;
+            var usersBungieID = usersRawBungieID.replace("#", "%23");
+
+            // Get user membershipId
+            try {
+                const membershipID = await fetchMembershipID(usersBungieID);
+
+                // Get users characterIds
+                var characters = await fetchCharacters(membershipID);
+                console.log(characters.length);
+                if (characters.length == 1) {
+                    var characterOneId = characters[0];
+                    var characterOnePreview = await fetchCharPreview(membershipID, characterOneId);
+                    var characterOneStats = await fetchCharStats(membershipID, characterOneId);
+                    displayCharacter1(characterOnePreview);
+                    displayCharacterStats1(characterOneStats);
+                    console.log(characterOnePreview);
+                    console.log(characterOneStats);
+                }
+                else if (characters.length == 2) {
+                    var characterOneId = characters[0];
+                    var characterTwoId = characters[1];
+                    var characterOnePreview = await fetchCharPreview(membershipID, characterOneId);
+                    var characterTwoPreview = await fetchCharPreview(membershipID, characterTwoId);
+                    var characterOneStats = await fetchCharStats(membershipID, characterOneId);
+                    var characterTwoStats = await fetchCharStats(membershipID, characterTwoId);
+                    displayCharacter2(characterOnePreview, characterTwoPreview);
+                    displayCharacterStats2(characterOneStats, characterTwoStats);
+                    console.log(characterOnePreview);
+                    console.log(characterTwoPreview);
+                    console.log(characterOneStats);
+                    console.log(characterTwoStats);
+                }
+                else if (characters.length == 3) {
+                    var characterOneId = characters[0];
+                    var characterTwoId = characters[1];
+                    var characterThreeId = characters[2];
+                    var characterOnePreview = await fetchCharPreview(membershipID, characterOneId);
+                    var characterTwoPreview = await fetchCharPreview(membershipID, characterTwoId);
+                    var characterThreePreview = await fetchCharPreview(membershipID, characterThreeId);
+                    var characterOneStats = await fetchCharStats(membershipID, characterOneId);
+                    var characterTwoStats = await fetchCharStats(membershipID, characterTwoId);
+                    var characterThreeStats = await fetchCharStats(membershipID, characterThreeId);
+                    displayCharacter(characterOnePreview, characterTwoPreview, characterThreePreview);
+                    displayCharacterStats(characterOneStats, characterTwoStats, characterThreeStats);
+                    console.log(characterOnePreview);
+                    console.log(characterTwoPreview);
+                    console.log(characterThreePreview);
+                    console.log(characterOneStats);
+                    console.log(characterTwoStats);
+                    console.log(characterThreeStats);
+                }
+                else {
+                    console.log("Error retrieving characters")
+                }
+
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
+
+        function fetchMembershipID(usersBungieID) {
+            var apiURL = 'https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/-1/' + usersBungieID + '/';
+            var apiKey = "53c4b9ba753a4ea38320b83fb0e20d45";
+
+            return fetch(apiURL, {
+                headers: {
+                    "X-API-Key": apiKey
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const membershipID = data.Response[0].membershipId;
+                    return membershipID;
+                });
+
+
+        }
+
+        function fetchProfile(usersMembershipID) {
+            var apiURL = 'https://www.bungie.net/Platform/Destiny2/1/Profile/' + usersMembershipID + '/?components=100';
+            var apiKey = "53c4b9ba753a4ea38320b83fb0e20d45";
+
+            var response = fetch(apiURL, {
+                headers: {
+                    "X-API-Key": apiKey
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+        }
+
+        function fetchCharacters(usersMembershipID) {
+            var apiURL = 'https://www.bungie.net/Platform/Destiny2/1/Profile/' + usersMembershipID + '/?components=100';
+            var apiKey = "53c4b9ba753a4ea38320b83fb0e20d45";
+
+            return fetch(apiURL, {
+                headers: {
+                    "X-API-Key": apiKey
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    var characterIds = data.Response.profile.data.characterIds;
+                    return characterIds;
+                });
+
+        }
+
+        function fetchCharPreview(usersMembershipID, charID) {
+            var apiURL = 'https://www.bungie.net/Platform/Destiny2/1/Profile/' + usersMembershipID + '/Character/' + charID + '/?components=200';
+            var apiKey = "53c4b9ba753a4ea38320b83fb0e20d45";
+
+            return fetch(apiURL, {
+                headers: {
+                    "X-API-Key": apiKey
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    var characterLightLevel = data.Response.character.data.light;
+                    var characterRace = data.Response.character.data.raceType;
+                    var characterClass = data.Response.character.data.classType;
+                    var charEmblemPath = data.Response.character.data.emblemPath;
+                    var charEmblemBackgroundPath = data.Response.character.data.emblemBackgroundPath;
+                    var CharPreviewData = [characterLightLevel, characterClass, charEmblemPath, charEmblemBackgroundPath, characterRace];
+                    return CharPreviewData;
+                });
+        }
+
+        function fetchCharStats(usersMembershipID, charID) {
+            var apiURL = 'https://www.bungie.net/Platform/Destiny2/1/Account/' + usersMembershipID + '/Character/' + charID + '/Stats/';
+            var apiKey = "53c4b9ba753a4ea38320b83fb0e20d45";
+            console.log(apiURL);
+
+            return fetch(apiURL, {
+                headers: {
+                    "X-API-Key": apiKey
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.Response.allPvP.allTime != undefined) {
+                        var characterGamesPlayed = data.Response.allPvP.allTime.activitiesEntered.basic.displayValue;
+                        var characterTimePlayed = data.Response.allPvP.allTime.totalActivityDurationSeconds.basic.displayValue;
+                        var characterWins = data.Response.allPvP.allTime.activitiesWon.basic.displayValue;
+                        var characterAssists = data.Response.allPvP.allTime.assists.basic.displayValue;
+                        var characterKills = data.Response.allPvP.allTime.kills.basic.displayValue;
+                        var characterDeaths = data.Response.allPvP.allTime.deaths.basic.displayValue;
+                        var characterKAD = data.Response.allPvP.allTime.efficiency.basic.displayValue;
+                        var characterKD = data.Response.allPvP.allTime.killsDeathsRatio.basic.displayValue;
+                        var CharStatsData = [characterGamesPlayed, characterTimePlayed, characterWins, characterAssists, characterKills, characterDeaths, characterKAD, characterKD];
+                        return CharStatsData;
+                    }
+                    else{
+                        return CharStatsData = [0,0,0,0,0,0,0,0];
+                    }
+                });
+        }
+
+        function displayCharacter1(characterOnePreview) {
+
+            var charOneClass = "";
+            var charOneRace = "";
+            var charOneLL = characterOnePreview[0];
+
+
+            if (document.getElementById('emblem1').src = "https://www.bungie.net" + characterOnePreview[3] || "") {
+                if (characterOnePreview[1] == 1) {
+                    charOneClass = "Hunter";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterOnePreview[1] == 2) {
+                    charOneClass = "Warlock";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charOneClass = "Titan";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterOnePreview[4] == 2) {
+                    charOneRace = "   Exo";
+                }
+                else if (characterOnePreview[4] == 1) {
+                    charOneRace = "Awoken";
+                }
+                else {
+                    charOneRace = "Human";
+                }
+            };
+
+            document.getElementById('emblem1Class').textContent = charOneClass;
+            document.getElementById('emblem1Race').textContent = charOneRace;
+            document.getElementById('emblem1LL').textContent = "✦" + charOneLL;
+
+        }
+
+        function displayCharacter2(characterOnePreview, characterTwoPreview) {
+
+            var charOneClass = "";
+            var charTwoClass = "";
+            var charOneRace = "";
+            var charTwoRace = "";
+            var charOneLL = characterOnePreview[0];
+            var charTwoLL = characterTwoPreview[0];
+
+
+            if (document.getElementById('emblem1').src = "https://www.bungie.net" + characterOnePreview[3] || "") {
+                if (characterOnePreview[1] == 1) {
+                    charOneClass = "Hunter";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterOnePreview[1] == 2) {
+                    charOneClass = "Warlock";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charOneClass = "Titan";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterOnePreview[4] == 2) {
+                    charOneRace = "   Exo";
+                }
+                else if (characterOnePreview[4] == 1) {
+                    charOneRace = "Awoken";
+                }
+                else {
+                    charOneRace = "Human";
+                }
+            };
+            if (document.getElementById('emblem2').src = "https://www.bungie.net" + characterTwoPreview[3] || "") {
+                if (characterTwoPreview[1] == 1) {
+                    charTwoClass = "Hunter";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterTwoPreview[1] == 2) {
+                    charTwoClass = "Warlock";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charTwoClass = "Titan";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterTwoPreview[4] == 2) {
+                    charTwoRace = "Exo";
+                }
+                else if (characterTwoPreview[4] == 1) {
+                    charTwoRace = "Awoken";
+                }
+                else {
+                    charTwoRace = "Human";
+                }
+            };
+
+            document.getElementById('emblem1Class').textContent = charOneClass;
+            document.getElementById('emblem2Class').textContent = charTwoClass;
+            document.getElementById('emblem1Race').textContent = charOneRace;
+            document.getElementById('emblem2Race').textContent = charTwoRace;
+            document.getElementById('emblem1LL').textContent = "✦" + charOneLL;
+            document.getElementById('emblem2LL').textContent = "✦" + charTwoLL;
+
+        }
+
+        function displayCharacter(characterOnePreview, characterTwoPreview, characterThreePreview) {
+
+            var charOneClass = "";
+            var charTwoClass = "";
+            var charThreeClass = "";
+            var charOneRace = "";
+            var charTwoRace = "";
+            var charThreeRace = "";
+            var charOneLL = characterOnePreview[0];
+            var charTwoLL = characterTwoPreview[0];
+            var charThreeLL = characterThreePreview[0];
+
+
+            if (document.getElementById('emblem1').src = "https://www.bungie.net" + characterOnePreview[3] || "") {
+                if (characterOnePreview[1] == 1) {
+                    charOneClass = "Hunter";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterOnePreview[1] == 2) {
+                    charOneClass = "Warlock";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charOneClass = "Titan";
+                    document.getElementById('character-box').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterOnePreview[4] == 2) {
+                    charOneRace = "   Exo";
+                }
+                else if (characterOnePreview[4] == 1) {
+                    charOneRace = "Awoken";
+                }
+                else {
+                    charOneRace = "Human";
+                }
+            };
+            if (document.getElementById('emblem2').src = "https://www.bungie.net" + characterTwoPreview[3] || "") {
+                if (characterTwoPreview[1] == 1) {
+                    charTwoClass = "Hunter";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterTwoPreview[1] == 2) {
+                    charTwoClass = "Warlock";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charTwoClass = "Titan";
+                    document.getElementById('character-box2').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterTwoPreview[4] == 2) {
+                    charTwoRace = "Exo";
+                }
+                else if (characterTwoPreview[4] == 1) {
+                    charTwoRace = "Awoken";
+                }
+                else {
+                    charTwoRace = "Human";
+                }
+            };
+            if (document.getElementById('emblem3').src = "https://www.bungie.net" + characterThreePreview[3] || "") {
+                if (characterThreePreview[1] == 1) {
+                    charThreeClass = "Hunter";
+                    document.getElementById('character-box3').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Hunter.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=8d1f4d90ab1ef832e4afad899465590302b27acd025ad73620db3d2eda2d79e0&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else if (characterThreePreview[1] == 2) {
+                    charThreeClass = "Warlock";
+                    document.getElementById('character-box3').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2022/04/290956-5951f379/2022_Guardian_Games_Wallpaper_9-16_Warlock.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=796622c1688b7da06911948d2f30e93051dcc0916becc1d1e29af8b155a298e9&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+                else {
+                    charThreeClass = "Titan";
+                    document.getElementById('character-box3').style.backgroundImage = 'url("https://imguscdn.gamespress.com/cdn/files/Bungie/2023/04/261647-12eb7717/d2_s20_Guardian-Games_Social_Banner_1080x1920_Titan.jpg?otf=y&lightbox=y&ex=2024-10-01+03%3A00%3A00&sky=c281f4f4d7a4332a5292aef93577ad52121a8ccb260d6e13a2ed7bd61ebef9ce&w=1024&maxheight=4096&mode=pad&format=jpg")';
+                }
+
+                if (characterThreePreview[4] == 2) {
+                    charThreeRace = "Exo";
+                }
+                else if (characterThreePreview[4] == 1) {
+                    charThreeRace = "Awoken";
+                }
+                else {
+                    charThreeRace = "Human";
+                }
+            };
+            document.getElementById('emblem1Class').textContent = charOneClass;
+            document.getElementById('emblem2Class').textContent = charTwoClass;
+            document.getElementById('emblem3Class').textContent = charThreeClass;
+            document.getElementById('emblem1Race').textContent = charOneRace;
+            document.getElementById('emblem2Race').textContent = charTwoRace;
+            document.getElementById('emblem3Race').textContent = charThreeRace;
+            document.getElementById('emblem1LL').textContent = "✦" + charOneLL;
+            document.getElementById('emblem2LL').textContent = "✦" + charTwoLL;
+            document.getElementById('emblem3LL').textContent = "✦" + charThreeLL;
+
+        }
+        function displayCharacterStats1(characterOneStats) {
+
+            //Char 1
+            document.getElementById('char1TPText').textContent = characterOneStats[1];
+            document.getElementById('char1GPText').textContent = characterOneStats[0] + " games played";
+            document.getElementById('char1WRVText').textContent = ((characterOneStats[2] / characterOneStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char1AVText').textContent = characterOneStats[3];
+            document.getElementById('char1KVText').textContent = characterOneStats[4];
+            document.getElementById('char1DVText').textContent = characterOneStats[5];
+            document.getElementById('char1KADVText').textContent = characterOneStats[6];
+            document.getElementById('char1KDVText').textContent = characterOneStats[7];
+
+            document.getElementById('loadingScreen').style.display = "none";
+            document.getElementById('actDrop').style.display = "block";
+            document.getElementById('emblem2-container').style.visibility = "hidden";
+            document.getElementById('emblem3-container').style.visibility = "hidden";
+            document.getElementById('character-box2').style.visibility = "hidden";
+            document.getElementById('character-box3').style.visibility = "hidden";
+            document.getElementById('characterPreviewContainer').style.display = "flex";
+            document.getElementById('characterStatsContainer').style.display = "flex";
+            document.getElementById('PvPButton').style.display = "block";
+            document.getElementById('PvEButton').style.display = "block";
+            document.getElementById('RaidButton').style.display = "block";
+
+        }
+        function displayCharacterStats2(characterOneStats, characterTwoStats) {
+
+            //Char 1
+            document.getElementById('char1TPText').textContent = characterOneStats[1];
+            document.getElementById('char1GPText').textContent = characterOneStats[0] + " games played";
+            document.getElementById('char1WRVText').textContent = ((characterOneStats[2] / characterOneStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char1AVText').textContent = characterOneStats[3];
+            document.getElementById('char1KVText').textContent = characterOneStats[4];
+            document.getElementById('char1DVText').textContent = characterOneStats[5];
+            document.getElementById('char1KADVText').textContent = characterOneStats[6];
+            document.getElementById('char1KDVText').textContent = characterOneStats[7];
+
+            //Char 2
+            document.getElementById('char3TPText').textContent = characterTwoStats[1];
+            document.getElementById('char3GPText').textContent = characterTwoStats[0] + " games played";
+            document.getElementById('char3WRVText').textContent = ((characterTwoStats[2] / characterTwoStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char3AVText').textContent = characterTwoStats[3];
+            document.getElementById('char3KVText').textContent = characterTwoStats[4];
+            document.getElementById('char3DVText').textContent = characterTwoStats[5];
+            document.getElementById('char3KADVText').textContent = characterTwoStats[6];
+            document.getElementById('char3KDVText').textContent = characterTwoStats[7];
+
+            document.getElementById('loadingScreen').style.display = "none";
+            document.getElementById('actDrop').style.display = "block";
+            document.getElementById('emblem3-container').style.visibility = "hidden"
+            document.getElementById('character-box3').style.visibility = "hidden";
+            document.getElementById('characterPreviewContainer').style.display = "flex";
+            document.getElementById('characterStatsContainer').style.display = "flex";
+            document.getElementById('PvPButton').style.display = "block";
+            document.getElementById('PvEButton').style.display = "block";
+            document.getElementById('RaidButton').style.display = "block";
+
+        }
+
+        function displayCharacterStats(characterOneStats, characterTwoStats, characterThreeStats) {
+
+            //Char 1
+            document.getElementById('char1TPText').textContent = characterOneStats[1];
+            document.getElementById('char1GPText').textContent = characterOneStats[0] + " games played";
+            document.getElementById('char1WRVText').textContent = ((characterOneStats[2] / characterOneStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char1AVText').textContent = characterOneStats[3];
+            document.getElementById('char1KVText').textContent = characterOneStats[4];
+            document.getElementById('char1DVText').textContent = characterOneStats[5];
+            document.getElementById('char1KADVText').textContent = characterOneStats[6];
+            document.getElementById('char1KDVText').textContent = characterOneStats[7];
+
+            //Char 2
+            document.getElementById('char2TPText').textContent = characterThreeStats[1];
+            document.getElementById('char2GPText').textContent = characterThreeStats[0] + " games played";
+            document.getElementById('char2WRVText').textContent = ((characterThreeStats[2] / characterThreeStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char2AVText').textContent = characterThreeStats[3];
+            document.getElementById('char2KVText').textContent = characterThreeStats[4];
+            document.getElementById('char2DVText').textContent = characterThreeStats[5];
+            document.getElementById('char2KADVText').textContent = characterThreeStats[6];
+            document.getElementById('char2KDVText').textContent = characterThreeStats[7];
+
+            //Char 3
+            document.getElementById('char3TPText').textContent = characterTwoStats[1];
+            document.getElementById('char3GPText').textContent = characterTwoStats[0] + " games played";
+            document.getElementById('char3WRVText').textContent = ((characterTwoStats[2] / characterTwoStats[0]) * 100).toFixed(2) + "%";
+            document.getElementById('char3AVText').textContent = characterTwoStats[3];
+            document.getElementById('char3KVText').textContent = characterTwoStats[4];
+            document.getElementById('char3DVText').textContent = characterTwoStats[5];
+            document.getElementById('char3KADVText').textContent = characterTwoStats[6];
+            document.getElementById('char3KDVText').textContent = characterTwoStats[7];
+
+            document.getElementById('loadingScreen').style.display = "none";
+            document.getElementById('actDrop').style.display = "block";
+            document.getElementById('characterPreviewContainer').style.display = "flex";
+            document.getElementById('characterStatsContainer').style.display = "flex";
+            document.getElementById('emblem2-container').style.visibility = "visible"
+            document.getElementById('character-box2').style.visibility = "visible";
+            document.getElementById('emblem3-container').style.visibility = "visible"
+            document.getElementById('character-box3').style.visibility = "visible";
+            document.getElementById('PvPButton').style.display = "block";
+            document.getElementById('PvEButton').style.display = "block";
+            document.getElementById('RaidButton').style.display = "block";
+
+        }
+
+    </script>
+</body>
+
+</html>
